@@ -1,73 +1,195 @@
-# Welcome to your Lovable project
+# ⚖️ المستشار القانوني
+### Legal Advisor System | React + TypeScript + Tailwind CSS
 
-## Project info
+---
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 📌 Overview
 
-## How can I edit this code?
+A smart **Arabic legal consultation system** built with React and TypeScript. The application provides an intelligent interface for legal advisory services, featuring a modern RTL (Right-to-Left) design optimized for Arabic-speaking users.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+| Technology | Version | Purpose |
+|---|---|---|
+| React | 18+ | UI Framework |
+| TypeScript | 5+ | Type Safety |
+| Tailwind CSS | 3+ | Styling |
+| Vite | 5+ | Build Tool & Dev Server |
+| Bun | Latest | Package Manager |
+| shadcn/ui | Latest | UI Components |
+| Vitest | Latest | Unit Testing |
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 📁 Project Structure
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```
+legal-advisor/
+│
+├── src/
+│   └── main.tsx              # Application entry point
+│
+├── index.html                # Root HTML (Arabic lang, RTL meta)
+├── tailwind.config.ts        # Tailwind + custom colors & animations
+├── vite.config.ts            # Vite configuration
+├── vitest.config.ts          # Test configuration
+├── tsconfig.json             # TypeScript config
+├── components.json           # shadcn/ui components config
+├── package.json              # Dependencies
+├── bun.lock                  # Bun lockfile
+└── .gitignore
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## ⚙️ Installation & Setup
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Prerequisites
+- Node.js 18+ or Bun
+- npm / bun
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Install with Bun (Recommended)
+```bash
+bun install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Install with npm
+```bash
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+---
+
+## 🚀 Running the App
+
+### Development Server
+```bash
+# With Bun
+bun run dev
+
+# With npm
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open: `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Production Build
+```bash
+# With Bun
+bun run build
 
-**Use GitHub Codespaces**
+# With npm
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Run Tests
+```bash
+# With Bun
+bun run test
 
-## What technologies are used for this project?
+# With npm
+npm run test
+```
 
-This project is built with:
+### Preview Production Build
+```bash
+bun run preview
+# or
+npm run preview
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 🎨 Design System
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Custom Fonts
+```typescript
+fontFamily: {
+  display: ["var(--font-display)", "serif"],   // Headings
+  body:    ["var(--font-body)", "sans-serif"], // Body text
+}
+```
 
-## Can I connect a custom domain to my Lovable project?
+### Color Tokens (CSS Variables)
+The app uses HSL-based CSS variables for full theming support:
+```
+--primary          Main brand color
+--secondary        Secondary actions
+--muted            Subtle backgrounds
+--accent           Highlights
+--destructive      Errors & warnings
+--sidebar-*        Sidebar-specific tokens
+```
 
-Yes, you can!
+### Custom Animations
+```
+fade-in            Smooth entry (opacity + translateY, 0.4s)
+accordion-down     Expand panels
+accordion-up       Collapse panels
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🌐 Localization
+
+The app is built for **Arabic** as the primary language:
+```html
+<html lang="ar">
+```
+
+- RTL layout support via Tailwind
+- Arabic title and meta description
+- Designed for right-to-left reading flow
+
+---
+
+## 🧩 UI Components
+
+Built on **shadcn/ui** — a collection of accessible, customizable React components. Components are configured via `components.json` and styled using Tailwind CSS variables.
+
+Available component categories:
+- Layout & Navigation (Sidebar)
+- Forms & Inputs
+- Feedback (Alerts, Toasts)
+- Overlays (Dialogs, Popovers)
+- Data Display (Cards, Accordion)
+
+---
+
+## 🧪 Testing
+
+Tests are configured with **Vitest** — a fast Vite-native test runner compatible with the Jest API.
+
+```bash
+bun run test        # Run all tests
+bun run test --ui   # Visual test UI
+```
+
+---
+
+## 📦 Key Scripts
+
+```json
+{
+  "dev":     "Start development server",
+  "build":   "Build for production",
+  "preview": "Preview production build",
+  "test":    "Run unit tests",
+  "lint":    "ESLint code check"
+}
+```
+
+---
+
+## 👤 Author
+
+**Ashraf Mahmoud**
+Computer Sciences — New Mansoura University
+
+---
+
+## 📄 License
+
+This project is for educational purposes.
